@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Portfolio Website</title>
+  </head>
+  <body>
+    <!-- Welcome Section -->
+    <div id="welcome-screen" class="welcome-screen">
+      <h1>Welcome to Khanjan's Portfolio</h1>
+      <button id="enter-button" class="btn">Enter</button>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+      <a href="#" class="logo">Khanjan</a>
+      <nav>
+        <a href="Index.html" class="active">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+      <div class="home-img">
+        <img src="Myimage.jpg" alt="" />
+      </div>
+      <div class="home-content">
+        <h1>Hi, It's <span>Khanjan</span></h1>
+        <h3 class="typing-text">I'm a <span></span></h3>
+        <p>
+          I'm Khanjan Padaliya, a dedicated Software Engineering and AI student
+          at Centennial College. With a strong foundation in coding and a
+          passion for innovative technology, I'm driven to explore solutions
+          that bridge creativity with technical expertise. My journey in
+          software development has equipped me with skills in both front-end and
+          back-end technologies, and I'm constantly learning and adapting to new
+          challenges in the field of AI. Let's connect and build something
+          amazing together!
+        </p>
+        <div class="social-icons">
+          <a href="www.linkedin.com/in/khanjan-padaliya-329944264"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/KhanjanPadaliya"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <a href="#" class="btn">Download CV</a>
+        <a href="#" class="btn">Hire me</a>
+      </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="languages-content">
+        <div class="language-box">
+          <h2>Frontend Languages</h2>
+          <ul>
+            <li><i class="fa-brands fa-html5"></i> HTML</li>
+            <li><i class="fa-brands fa-css3"></i> CSS</li>
+            <li><i class="fa-brands fa-js"></i> JavaScript</li>
+            <li><i class="fa-brands fa-react"></i> React</li>
+            <li><i class="fa-brands fa-python"></i> Python</li>
+          </ul>
+        </div>
+        <div class="language-box">
+          <h2>Backend Languages</h2>
+          <ul>
+            <li><i class="fa-solid fa-wrench"></i> C#</li>
+            <li><i class="fa-brands fa-java"></i> Java</li>
+            <li><i class="fa-brands fa-node"></i> Node.js</li>
+            <li><i class="fa-brands fa-python"></i> Python</li>
+            <li><i class="fa-solid fa-database"></i> SQL</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects-content">
+        <div class="project-item">
+          <img src="tic-tac-toe.png" alt="Project 1 Image" />
+          <div class="project-buttons">
+            <a
+              href="https://github.com/KhanjanPadaliya/Tic-tac-toe/blob/main/index.html"
+              class="btn"
+              >Open Code</a
+            >
+            <a href="https://github.com/KhanjanPadaliya/Tic-tac-toe" class="btn"
+              >GitHub Repo</a
+            >
+          </div>
+        </div>
+        <div class="project-item">
+          <img src="weather.png" alt="Project 2 Image" />
+          <div class="project-buttons">
+            <a href="#" class="btn">Open Code</a>
+            <a href="#" class="btn">GitHub Repo</a>
+          </div>
+        </div>
+        <div class="project-item">
+          <img src="car.png" alt="Project 3 Image" />
+          <div class="project-buttons">
+            <a
+              href="https://github.com/KhanjanPadaliya/Car_application/blob/main/index.html"
+              class="btn"
+              >Open Code</a
+            >
+            <a
+              href="https://github.com/KhanjanPadaliya/Car_application"
+              class="btn"
+              >GitHub Repo</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <i class="fa-solid fa-envelope contact-icon email-icon"></i>
+          <p>
+            Email:
+            <a href="mailto:padaliyakhanjan@gmail.com"
+              >padaliyakhanjan@gmail.com</a
+            >
+          </p>
+        </div>
+        <div class="contact-info-container">
+          <i class="fa-solid fa-phone contact-icon"></i>
+          <p>Phone: <a href="tel:+14376625415">+1 (437) 662-5415</a></p>
+        </div>
+        <div class="contact-info-container">
+          <i class="fa-brands fa-linkedin contact-icon"></i>
+          <p>
+            LinkedIn:
+            <a href="https://linkedin.com/in/khanjan" target="_blank"
+              >linkedin.com/in/khanjan</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <a href="#" class="btn" id="scrollToTop">
+      <p>Top</p>
+    </a>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2024 Khanjan. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      // Get the button
+      const scrollToTopButton = document.getElementById("scrollToTop");
+      // Show or hide the button based on scroll position
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          scrollToTopButton.style.display = "block"; // Show button
+        } else {
+          scrollToTopButton.style.display = "none"; // Hide button
+        }
+      };
+
+      // Scroll smoothly to the top when the button is clicked
+      scrollToTopButton.onclick = function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth", // Smooth scrolling
+        });
+      };
+      // Hide welcome screen and show main content with slide-up effect
+      document
+        .getElementById("enter-button")
+        .addEventListener("click", function () {
+          const welcomeScreen = document.getElementById("welcome-screen");
+          welcomeScreen.classList.add("slide-up"); // Add class to trigger animation
+          // Wait for the animation to finish before hiding the welcome screen
+          setTimeout(() => {
+            welcomeScreen.style.display = "none";
+          }, 500); // Match this duration with the CSS transition duration
+        });
+    </script>
+  </body>
+</html>
