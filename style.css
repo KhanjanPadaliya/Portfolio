@@ -321,6 +321,26 @@ h1::after, h2::after {
 h1:hover::after, h2:hover::after {
     transform: translateX(0); /* Move it to the right to show the underline */
 }
+.video-container {
+    position: relative; /* Ensures the positioning of pseudo-elements works */
+    width: 370px; /* Fixed width */
+    height: 400px; /* Fixed height */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensures rounded corners apply to the video */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+    padding-right: 5px;
+}
+
+.video-container video {
+    width: 100%; /* Video fits the container's width */
+    height: 100%; /* Video fits the container's height */
+    object-fit: cover; /* Ensures the video scales properly to fit dimensions */
+    border-radius: 10px; /* Ensures video corners match the container */
+    cursor: pointer; /* Indicates interactivity */
+}
+
+
 /* Projects Section */
 #projects{
     padding-top: 9rem;

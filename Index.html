@@ -109,6 +109,23 @@
           </div>
         </div>
         <div class="project-item">
+          <div class="video-container">
+          <video controls>
+            <source src="Game.mp4" type="video/mp4">
+          </video>
+        </div>
+          <div class="project-buttons">
+            <a
+              href="https://github.com/viernesviernes/COMP229-Game-Database-Review"
+              class="btn"
+              >Open Code</a
+            >
+            <a href="https://comp229f24-game-database.onrender.com/" class="btn"
+              >Live Demo</a
+            >
+          </div>
+        </div>
+        <div class="project-item">
           <img src="weather.png" alt="Project 2 Image" />
           <div class="project-buttons">
             <a
@@ -182,6 +199,49 @@
     </footer>
 
     <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const sections = document.querySelectorAll("section"); // All sections
+        const navLinks = document.querySelectorAll("nav a"); // All nav links
+      
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const activeId = entry.target.id;
+                navLinks.forEach((link) => {
+                  link.classList.toggle(
+                    "active",
+                    link.getAttribute("href") === `#${activeId}`
+                  );
+                });
+              }
+            });
+          },
+          {
+            rootMargin: "-10% 0px -50% 0px", // Adjusts detection zone (top & bottom margins)
+            threshold: 0.1, // Detect even a small part of the section in view
+          }
+        );
+      
+        sections.forEach((section) => observer.observe(section));
+      
+        // Handle manual scroll with anchor links
+        navLinks.forEach((link) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault(); // Prevent default anchor behavior
+            const targetId = link.getAttribute("href").substring(1); // Get section ID
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+              window.scrollTo({
+                top: targetSection.offsetTop - 50, // Adjust for header height
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      });
+      
+      
       // Get the button
       const scrollToTopButton = document.getElementById("scrollToTop");
       // Show or hide the button based on scroll position
